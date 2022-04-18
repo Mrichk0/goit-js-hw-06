@@ -5,10 +5,13 @@ onInputValidation.addEventListener("blur", onInputChangeColor);
 
 function onInputChangeColor(event) {
   if (event.currentTarget.value.length === onInputLength) {
-    onInputValidation.classList.add("valid");
-    onInputValidation.classList.remove("invalid");
+    addInputColor("valid", "invalid");
   } else {
-    onInputValidation.classList.add("invalid");
-    onInputValidation.classList.remove("valid");
+    addInputColor("invalid", "valid");
   }
+}
+
+function addInputColor(correct, mistake) {
+  onInputValidation.classList.add(correct);
+  onInputValidation.classList.remove(mistake);
 }
