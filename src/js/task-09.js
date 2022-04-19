@@ -9,6 +9,7 @@ function getRandomHexColor() {
 }
 
 function onChangeBgColor(event) {
-  nameColor.textContent = getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  nameColor.textContent = color;
+  body.style.backgroundColor = color;
 }
